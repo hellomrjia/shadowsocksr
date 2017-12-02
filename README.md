@@ -1,9 +1,9 @@
 ShadowsocksR
 ===========
 
-[![Build Status]][Travis CI]
+[![Build Status]][Travis CI] A fast tunnel proxy that helps you bypass firewalls.
 
-A fast tunnel proxy that helps you bypass firewalls.
+[[中文]]
 
 Usage
 ------
@@ -11,7 +11,7 @@ Usage
 ### Clone or download project
 
 ``` bash
-git clone https://github.com/showzeng/shadowsocksr
+~ $ git clone https://github.com/showzeng/shadowsocksr
 ```
 
 ### Usage for single user on linux platform
@@ -35,8 +35,8 @@ Fill in your configuration file (shadowsocksr/config.json):
     "speed_limit_per_con": 0,
     "speed_limit_per_user": 0,
 
-    "additional_ports" : {}, // only works under multi-user mode
-    "additional_ports_only" : false, // only works under multi-user mode
+    "additional_ports" : {},
+    "additional_ports_only" : false,
     "timeout": 120,
     "udp_timeout": 60,
     "dns_ipv6": false,
@@ -63,12 +63,16 @@ You need config your configuration with these items:
 Then turn on your terminal and get into "shadowsocksr/" folder. Excute the command as below:
 
 ``` bash
-path/shadowsocksr [manyuser] $ chmod 755 runssr stopssr
-path/shadowsocksr [manyuser] $ sudo mv runssr stopssr /usr/local/bin
+~/shadowsocksr [manyuser] $ chmod 755 runssr stopssr
+
+~/shadowsocksr [manyuser] $ sudo mv runssr stopssr /usr/local/bin
 [sudo] password for xxxx: 
-path/shadowsocksr [manyuser] $ ../
-path $ sudo mv shadowsocksr/ /opt/
-path $ source /etc/profile
+
+~/shadowsocksr [manyuser] $ ../
+
+~ $ sudo mv shadowsocksr/ /opt/
+
+~ $ source /etc/profile
 ```
 
 Once done with that, you can turn on/off shadowsocksR with these simple command at anytime as you wish :p , such as you just open your computer.
@@ -76,13 +80,13 @@ Once done with that, you can turn on/off shadowsocksR with these simple command 
 ### Turn on SSR
 
 ``` bash
-$ runssr
+~ $ runssr
 ```
 
 ### Turn off SSR
 
 ``` bash
-$ stopssr
+~ $ stopssr
 ```
 
 Documentation
@@ -117,3 +121,4 @@ Bugs and Issues
 [Travis CI]:         https://travis-ci.org/shadowsocksr/shadowsocksr
 [Wiki]:              https://github.com/breakwa11/shadowsocks-rss/wiki
 [Issue Tracker]:     https://github.com/shadowsocksr/shadowsocksr/issues?state=open
+[中文]:               https://showzeng.itscoder.com/shadowsocksr/2017/12/02/use-ssr-under-linux
