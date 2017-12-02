@@ -11,7 +11,7 @@ Usage
 ### Clone or download project
 
 ``` bash
-git clone https://github.com/shadowsocksr/shadowsocksr.git
+git clone https://github.com/showzeng/shadowsocksr
 ```
 
 ### Usage for single user on linux platform
