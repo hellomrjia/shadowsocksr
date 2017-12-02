@@ -1,16 +1,16 @@
 ShadowsocksR
 ===========
 
-[![Build Status]][Travis CI] A fast tunnel proxy that helps you bypass firewalls.
+[![Build Status]][Travis CI]  [[中文]]
 
-[[中文]]
+A fast tunnel proxy that helps you bypass firewalls.
 
 Usage
 ------
 
 ### Clone or download project
 
-``` bash
+``` text
 ~ $ git clone https://github.com/showzeng/shadowsocksr
 ```
 
@@ -62,7 +62,7 @@ You need config your configuration with these items:
 
 Then turn on your terminal and get into "shadowsocksr/" folder. Excute the command as below:
 
-``` bash
+``` text
 ~/shadowsocksr [manyuser] $ chmod 755 runssr stopssr
 
 ~/shadowsocksr [manyuser] $ sudo mv runssr stopssr /usr/local/bin
@@ -79,13 +79,13 @@ Once done with that, you can turn on/off shadowsocksR with these simple command 
 
 ### Turn on SSR
 
-``` bash
+``` text
 ~ $ runssr
 ```
 
 ### Turn off SSR
 
-``` bash
+``` text
 ~ $ stopssr
 ```
 
