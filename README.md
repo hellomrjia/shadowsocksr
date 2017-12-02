@@ -73,13 +73,13 @@ path $ source /etc/profile
 
 Once done with that, you can turn on/off shadowsocksR with these simple command at anytime as you wish :p , such as you just open your computer.
 
-## Turn on SSR
+### Turn on SSR
 
 ``` bash
 $ runssr
 ```
 
-## Turn off SSR
+### Turn off SSR
 
 ``` bash
 $ stopssr
