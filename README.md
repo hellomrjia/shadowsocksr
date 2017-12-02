@@ -5,64 +5,85 @@ ShadowsocksR
 
 A fast tunnel proxy that helps you bypass firewalls.
 
-Server
+Usage
 ------
 
-### Install
+### Clone or download project
 
-Debian / Ubuntu:
-
-    apt-get install git
-    git clone https://github.com/shadowsocksr/shadowsocksr.git
-
-CentOS:
-
-    yum install git
-    git clone https://github.com/shadowsocksr/shadowsocksr.git
-
-Windows:
-
-    git clone https://github.com/shadowsocksr/shadowsocksr.git
+``` bash
+git clone https://github.com/shadowsocksr/shadowsocksr.git
+```
 
 ### Usage for single user on linux platform
 
-If you clone it into "~/shadowsocksr"  
-move to "~/shadowsocksr", then run:
+Fill in your configuration file (shadowsocksr/config.json):
 
-    bash initcfg.sh
+``` json
+{
+    "server": "0.0.0.0",
+    "server_ipv6": "::",
+    "server_port": 8388,
+    "local_address": "127.0.0.1",
+    "local_port": 1080,
 
-move to "~/shadowsocksr/shadowsocks", then run:
+    "password": "m",
+    "method": "aes-128-ctr",
+    "protocol": "auth_aes128_md5",
+    "protocol_param": "",
+    "obfs": "tls1.2_ticket_auth_compatible",
+    "obfs_param": "",
+    "speed_limit_per_con": 0,
+    "speed_limit_per_user": 0,
 
-    python server.py -p 443 -k password -m aes-128-cfb -O auth_aes128_md5 -o tls1.2_ticket_auth_compatible
+    "additional_ports" : {}, // only works under multi-user mode
+    "additional_ports_only" : false, // only works under multi-user mode
+    "timeout": 120,
+    "udp_timeout": 60,
+    "dns_ipv6": false,
+    "connect_verbose_info": 0,
+    "redirect": "",
+    "fast_open": false
+}
+```
 
-Check all the options via `-h`.
+You need config your configuration with these items:
 
-You can also use a configuration file instead (recommend), move to "~/shadowsocksr" and edit the file "user-config.json", then move to "~/shadowsocksr/shadowsocks" again, just run:
+``` json
+{
+    "server": "0.0.0.0",
+    "server_port": 8388,
 
-    python server.py
+    "password": "m",
+    "method": "aes-128-ctr",
+    "protocol": "auth_aes128_md5",
+    "obfs": "tls1.2_ticket_auth_compatible",
+}
+```
 
-To run in the background:
+Then turn on your terminal and get into "shadowsocksr/" folder. Excute the command as below:
 
-    ./logrun.sh
+``` bash
+path/shadowsocksr [manyuser] $ chmod 755 runssr stopssr
+path/shadowsocksr [manyuser] $ sudo mv runssr stopssr /usr/local/bin
+[sudo] password for xxxx: 
+path/shadowsocksr [manyuser] $ ../
+path $ sudo mv shadowsocksr/ /opt/
+path $ source /etc/profile
+```
 
-To stop:
+Once done with that, you can turn on/off shadowsocksR with these simple command at anytime as you wish :p , such as you just open your computer.
 
-    ./stop.sh
+## Turn on SSR
 
-To monitor the log:
+``` bash
+$ runssr
+```
 
-    ./tail.sh
+## Turn off SSR
 
-
-Client
-------
-
-* [Windows] / [macOS]
-* [Android] / [iOS]
-* [OpenWRT]
-
-Use GUI clients on your local PC/phones. Check the README of your client
-for more information.
+``` bash
+$ stopssr
+```
 
 Documentation
 -------------
@@ -92,14 +113,7 @@ Bugs and Issues
 * [Issue Tracker]
 
 
-
-[Android]:           https://github.com/shadowsocksr/shadowsocksr-android
 [Build Status]:      https://travis-ci.org/shadowsocksr/shadowsocksr.svg?branch=manyuser
-[Debian sid]:        https://packages.debian.org/unstable/python/shadowsocks
-[iOS]:               https://github.com/shadowsocks/shadowsocks-iOS/wiki/Help
-[Issue Tracker]:     https://github.com/shadowsocksr/shadowsocksr/issues?state=open
-[OpenWRT]:           https://github.com/shadowsocks/openwrt-shadowsocks
-[macOS]:             https://github.com/shadowsocksr/ShadowsocksX-NG
 [Travis CI]:         https://travis-ci.org/shadowsocksr/shadowsocksr
-[Windows]:           https://github.com/shadowsocksr/shadowsocksr-csharp
 [Wiki]:              https://github.com/breakwa11/shadowsocks-rss/wiki
+[Issue Tracker]:     https://github.com/shadowsocksr/shadowsocksr/issues?state=open
