@@ -121,4 +121,4 @@ Bugs and Issues
 [Travis CI]:         https://travis-ci.org/shadowsocksr/shadowsocksr
 [Wiki]:              https://github.com/breakwa11/shadowsocks-rss/wiki
 [Issue Tracker]:     https://github.com/shadowsocksr/shadowsocksr/issues?state=open
-[中文]:               https://showzeng.itscoder.com/shadowsocksr/linux/2017/12/02/use-ssr-under-linux.html
+[中文]:               https://showzeng.itscoder.com/linux/2017/12/02/use-ssr-under-linux.html
